@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float num;
+    printf("digite o numero real que sera elevado ao quadrado ");
+    scanf("%f", &num);
+    num = num * num;
+    printf("o resultado da potenciacao eh %f", num);
+    return 0;
+}

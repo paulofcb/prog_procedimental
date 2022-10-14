@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float tc = 0, tk = 0;
+    printf("digite a temperatura em kelvin que deve ser convertida ");
+    scanf("%f", &tk);
+    tc = tk - 273.15;
+    printf("o resultado da convercao eh %f", tc);
+    return 0;
+}

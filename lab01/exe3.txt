@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num1, num2, num3, soma;
+    printf("digite o primeiro numero inteiro ");
+    scanf("%d", &num1);
+    printf("agora digite o segundo ");
+    scanf("%d", &num2);
+    printf("agora digite o terceiro ");
+    scanf("%d", &num3);
+    soma = num1 + num2 + num3;
+    printf("a soma dos tres numeros eh %d", soma);
+    return 0;
+}

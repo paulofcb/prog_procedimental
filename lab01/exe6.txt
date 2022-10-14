@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float tc, tf;
+    printf("digite a temperatura em celsius que deve ser convertida ");
+    scanf("%f", &tc);
+    tf = (tc * 9)/5 +32;
+    printf("o resultado da convercao eh %f", tf);
+    return 0;
+}

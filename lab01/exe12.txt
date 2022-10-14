@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float mil, km;
+    printf("digite a distancia em milhas que deve ser convertida ");
+    scanf("%f", &mil);
+    km = mil * 1.62;
+    printf("o resultado da convercao eh %f", km);
+    return 0;
+}

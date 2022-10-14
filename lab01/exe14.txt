@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float grau, rad;
+    printf("digite a o angulo em graus que deve ser convertido ");
+    scanf("%f", &grau);
+    rad = grau * (3.14 / 180);
+    printf("o resultado da convercao eh %f", rad);
+    return 0;
+}

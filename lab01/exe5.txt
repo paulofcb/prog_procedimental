@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float num;
+    printf("digite o numero real que sera dividido por 5 ");
+    scanf("%f", &num);
+    num = num / 5;
+    printf("o resultado da divisao eh %f", num);
+    return 0;
+}

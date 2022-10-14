@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float num = 0;
+    printf("digite um numero real ");
+    scanf("%f", &num);
+    printf("o numero digitado foi %f", num);
+    return 0;
+}

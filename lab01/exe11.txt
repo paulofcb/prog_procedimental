@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float vkh, vms;
+    printf("digite a velocidade em ms que deve ser convertida ");
+    scanf("%f", &vms);
+    vkh = vms * 3.6;
+    printf("o resultado da convercao eh %f", vkh);
+    return 0;
+}
