@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num = 0;
+    printf("digite um numero inteiro ");
+    scanf("%d", &num);
+    printf("o numero digitado foi %d", num);
+    return 0;
+}
