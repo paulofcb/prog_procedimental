@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float valr, vald, cotd;
+    printf("qual o valor em real ue sera convertido ");
+    scanf("%f", &valr);
+    printf("qual a cotacao atual do dolar ");
+    scanf("%f", &cotd);
+    vald = valr / cotd;
+    printf("o valor em dolares sera %f", vald);
+    return 0;
+}

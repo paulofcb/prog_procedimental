@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    char letm;
+    printf("digite uma letra maiuscula ");
+    scanf("%c", &letm);
+    letm = letm + 32;
+    printf("a letra na versao minuscula eh %c", letm);
+    return 0;
+}

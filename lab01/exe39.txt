@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float pri, seg, ter;
+    pri = 780000 * 0.46;
+    seg = 780000 * 0.32;
+    ter = 780000 * 0.22;
+    printf("o primeiro ganhou %.2f, o segundo %.2f e o terceiro, %.2f", pri, seg, ter);
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float acr, met;
+    printf("digite a area em acres que deve ser convertida ");
+    scanf("%f", &acr);
+    met = acr * 4048.58;
+    printf("o resultado da convercao eh %f", met);
+    return 0;
+}

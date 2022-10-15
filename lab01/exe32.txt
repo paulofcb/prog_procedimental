@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num, suctri, antdob, soma;
+    printf("digite um numero inteiro ");
+    scanf("%d", &num);
+    antdob = (2 * num) - 1;
+    suctri = (3 * num) + 1;
+    soma = suctri + antdob;
+    printf("a soma do sucessor do triplo de %d com o antecessor de seu dobro eh %d ", num, soma);
+    return 0;
+}

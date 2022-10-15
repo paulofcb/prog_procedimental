@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float larg, comp, area, pmtela, total;
+    printf("qual a largura do terreno ");
+    scanf("%f", &larg);
+    printf("qual ao comprimento do terreno ");
+    scanf("%f", &comp);
+    printf("qual o preco do metro de tela ");
+    scanf("%f", &pmtela);
+    area = 2 * larg + 2 * comp;
+    total = pmtela * area;
+    printf("o valor total a ser pago eh %f", total);
+    return 0;
+}

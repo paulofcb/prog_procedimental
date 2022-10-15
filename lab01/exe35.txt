@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float ca, cb, hipo;
+    printf("qual o cateto a do triangulo ");
+    scanf("%f", &ca);
+    printf("qual o cateto b do triangulo ");
+    scanf("%f", &cb);
+    hipo = sqrt(ca * ca + cb * cb);
+    printf("a hipotenusa desse triangulo eh %.2f", hipo);
+    return 0;
+}

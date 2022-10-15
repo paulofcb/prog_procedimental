@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num, sucn, antn;
+    printf("digite um numero inteiro ");
+    scanf("%d", &num);
+    antn = num - 1;
+    sucn = num + 1;
+    printf("o antecessor de %d eh %d e o sucessor eh %d", num, antn, sucn);
+    return 0;
+}

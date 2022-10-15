@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float m3, litros;
+    printf("digite a o o volume em litros que deve ser convertido ");
+    scanf("%f", &litros);
+    m3 = litros / 1000;
+    printf("o resultado da convercao eh %f", m3);
+    return 0;
+}

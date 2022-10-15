@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float jar, met;
+    printf("digite o comprimento em jardas que deve ser convertido ");
+    scanf("%f", &jar);
+    met = jar * 0.91;
+    printf("o resultado da convercao eh %f", met);
+    return 0;
+}

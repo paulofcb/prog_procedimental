@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float altura, raio, areab, volume;
+    printf("qual a altura do cilindro ");
+    scanf("%f", &altura);
+    printf("qual o raio da base desse cilindro ");
+    scanf("%f", &raio);
+    areab = 3.141592 * raio * raio;
+    volume = areab * altura;
+     printf("o volume desse cilindro eh %f", volume);
+    return 0;
+}

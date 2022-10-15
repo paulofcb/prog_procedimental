@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float antsal, novsal;
+    printf("qual o valor do salario atual ");
+    scanf("%f", &antsal);
+    novsal = antsal * 1.25;
+    printf("o novo salario eh %f", novsal);
+    return 0;
+}

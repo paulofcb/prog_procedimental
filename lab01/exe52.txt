@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float iami1, iami2, iami3, rami1, rami2, rami3, soma, premio;
+    printf("quanto o amigo 1 investiu ");
+    scanf("%f", &iami1);
+    printf("quanto o amigo 2 investiu ");
+    scanf("%f", &iami2);
+    printf("quanto o amigo 3 investiu ");
+    scanf("%f", &iami3);
+    printf("qual o valor do premio ");
+    scanf("%f", &premio);
+    soma = iami1 + iami2 + iami3;
+    rami1 =  (iami1 / soma) * premio;
+    rami2 =  (iami2 / soma) * premio;
+    rami3 =  (iami3 / soma) * premio;
+    printf("o amigo 1 ganhou %.2f, o amigo 2 ganhou %.2f e o amigo 3 ganhou %.2f", rami1, rami2, rami3);
+    return 0;
+}

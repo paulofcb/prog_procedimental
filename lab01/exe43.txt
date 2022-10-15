@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float total, cdes, vpar, comv, comp;
+    printf("qual o valor base do produto ");
+    scanf("%f", &total);
+    cdes = total * 0.9;
+    vpar = total / 3;
+    comv = cdes * 0.05;
+    comp = total * 0.05;
+    printf("o valor com desconto eh %.2f\no valor de cada parcela eh %.2f\na comissao do funcionario eh %.2f na compra a vista e %.2f na parcelada", cdes, vpar, comv, comp);
+    return 0;
+}

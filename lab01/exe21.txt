@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float kg, lib;
+    printf("digite a o a massa em libras que deve ser convertida ");
+    scanf("%f", &lib);
+    kg = lib * 0.45;
+    printf("o resultado da convercao eh %f", kg);
+    return 0;
+}

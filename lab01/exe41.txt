@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float sala, gpho, hotr;
+    printf("quanto o trabalhador ganha por hora ");
+    scanf("%f", &gpho);
+    printf("quantas horas o trabalhador trabalha por mes ");
+    scanf("%f", &hotr);
+    sala = gpho * hotr * 1.1;
+    printf("o valor do salario desse funcionario eh %.2f", sala);
+    return 0;
+}

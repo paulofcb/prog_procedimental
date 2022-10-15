@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int adeg, amax, ndeg;
+    printf("qual a altura de cada degrau da escada ");
+    scanf("%d", &adeg);
+    printf("qual altura deve ser alcancada ");
+    scanf("%d", &amax);
+    ndeg = amax / adeg;
+    printf("o numero de degraus que devem ser subidos eh %d", ndeg);
+    return 0;
+}

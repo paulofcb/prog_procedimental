@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float pole, cent;
+    printf("digite a o comprimento em centimetros que deve ser convertido ");
+    scanf("%f", &cent);
+    pole = cent / 2.54;
+    printf("o resultado da convercao eh %f", pole);
+    return 0;
+}

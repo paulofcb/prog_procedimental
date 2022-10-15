@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float comdes, semdes;
+    printf("qual o valor do produto ");
+    scanf("%f", &semdes);
+    comdes = semdes * 0.88;
+    printf("o novo preco com 12 por cento de desconto eh %f", comdes);
+    return 0;
+}

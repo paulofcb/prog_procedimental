@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float vliq;
+    int dias;
+    printf("quantos dias o encanador ira trabalhar ");
+    scanf("%d", &dias);
+    vliq = dias * 30 * 0.92;
+    printf("o valor liquido a ser pago eh %.2f", vliq);
+    return 0;

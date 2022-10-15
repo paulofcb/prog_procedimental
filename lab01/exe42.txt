@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float nsal, asal;
+    printf("qual o salario base do trabalhador ");
+    scanf("%f", &asal);
+    nsal = asal + (asal * 0.05) - (asal * 0.07);
+    printf("o valor do salario desse funcionario eh %.2f", nsal);
+    return 0;
+}

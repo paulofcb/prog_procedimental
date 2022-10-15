@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num, dig1, dig2, dig3, dig4;
+    printf("digite um numero inteiro de quatro digitos ");
+    scanf("%d", &num);
+    dig1 = num / 1000;
+    dig2 = (num % 1000) / 100;
+    dig3 = ((num % 1000) % 100) /10;
+    dig4 = ((num % 1000) % 100) %10;
+    printf("os numeros separados em cada linha ficam na segunte forma\n%d\n%d\n%d\n%d", dig1, dig2, dig3, dig4);
+    return 0;
+}
