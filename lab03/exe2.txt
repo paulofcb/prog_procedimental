@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float num, resu;
+    printf("digite um numero para o calculo da raiz ");
+    scanf("%f", &num);
+    if(num > 0){
+        resu = sqrt(num);
+        printf("a raiz de %.2f eh %.2f", num, resu);
+    }else{
+            printf("%.2f nao eh positivo",num);
+    }
+return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ int num, resto;
+ printf("digite um numero inteiro ");
+ scanf("%d", &num);
+ resto = num % 2;
+ if(resto != 0){
+    printf("esse numero eh impar");
+ }else{
+        printf("esse numero eh par");
+ }
+return 0;
+}

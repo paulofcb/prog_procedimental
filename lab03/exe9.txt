@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float sal, pres;
+    printf("digite o valor do salario do empregado ");
+    scanf("%f", &sal);
+    printf("digite o valor da prestacao ");
+    scanf("%f", &pres);
+    if(pres < sal * 0.20) {
+        printf("emprestimo concedido");
+    }else{
+            printf("emprestimo nao concedido");
+    }
+return 0;
+}
