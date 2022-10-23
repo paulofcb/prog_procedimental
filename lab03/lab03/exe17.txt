@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    float baseme, basema, altura, area;
+    printf ("digite o valor da base menor ");
+    scanf ("%f", &baseme);
+    printf ("digite o valor da base maior ");
+    scanf ("%f", &basema);
+    printf ("digite o valor da altura ");
+    scanf ("%f", &altura);
+    if (basema > 0 && baseme > 0){
+        area = ((basema + baseme) * altura) / 2;
+        printf ("o valor da area eh %f", area);
+    } else {
+        printf("o valor digitado eh invalido");
+    }
+
+    return 0;
+}

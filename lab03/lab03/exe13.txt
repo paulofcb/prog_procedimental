@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+
+    float not1, not2, not3, media, soma;
+    printf ("digite a nota da primeira prova ");
+    scanf ("%f", &not1);
+    printf ("digite a nota da segunda prova ");
+    scanf ("%f", &not2);
+    printf ("digite a nota da terceira prova ");
+    scanf ("%f", &not3);
+    media = (not1 + not2 + 2 * not3) / 5;
+    soma = not1 + not2 + 2 * not3;
+    printf ("a media entre as notas foi %.2f e sua pontuacao total eh %.2f\n", media, soma);
+    if (soma >= 60){
+        printf ("voce passou");
+    } else {
+            printf("voce reprovou");
+    }
+
+    return 0;
+}

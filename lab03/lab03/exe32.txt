@@ -1,0 +1,42 @@
+#include stdio.h
+#include stdlib.h
+#include math.h
+int main(){
+    int pedido, quant;
+    float conta;
+    printf (escolha seu pedido \nEspecificacao  Codigo Preco\nCachorro Quente 100   1,20\nBauru Simples   101   1,30\nBauru com Ovo   102   1,50\nHamburguer      103   1,20\nCheeseburguer   104   1,70\nSuco            105   2,20\nRefrigerante    106   1,00\n );
+    scanf(%d, &pedido);
+    printf (escolha a quantidade );
+    scanf(%d, &quant);
+    switch(pedido){
+        case 100 
+            conta = quant  1.2;
+            printf (a conta eh %f, conta);
+        break;
+        case 101 
+            conta = quant  1.3;
+            printf (a conta eh %f, conta);
+        break;
+        case 102 
+            conta = quant  1.5;
+            printf (a conta eh %f, conta);
+        break;
+        case 103 
+            conta = quant  1.2;
+            printf (a conta eh %f, conta);
+        break;
+        case 104 
+            conta = quant  1.7;
+            printf (a conta eh %f, conta);
+        break;
+        case 105 
+            conta = quant  2.2;
+            printf (a conta eh %f, conta);
+        break;
+        case 106 
+            conta = quant  1;
+            printf (a conta eh %f, conta);
+        break;
+    }
+return 0;
+}

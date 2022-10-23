@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float comb, dist, consumo;
+    printf ("qual o consumo de coombustivel ");
+    scanf ("%f", &comb);
+    printf ("qual a distancia percorrida ");
+    scanf ("%f", &dist);
+    consumo = dist / comb;
+    if (consumo < 8){
+        printf ("venda o carro");
+    }
+     if (consumo >= 8 && consumo < 14){
+        printf ("economico");
+    }
+     if (consumo >= 14){
+        printf ("super economico");
+    }
+    
+return 0;
+}

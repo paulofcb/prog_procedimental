@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num;
+    printf ("digite um inteiro entre 1 e 12 : ");
+    scanf ("%d", &num);
+    switch (num){
+        case 1 :
+            printf ("este numero corresponde ao mes de janeiro\n");
+        break;
+        case 2 :
+            printf ("este numero corresponde ao mes de fevereiro\n");
+        break;
+        case 3 :
+            printf ("este numero corresponde ao mes de marco\n");
+        break;
+        case 4 :
+            printf ("este numero corresponde ao mes de abril\n");
+        break;
+        case 5 :
+            printf ("este numero corresponde ao mes de maio\n");
+        break;
+        case 6 :
+            printf ("este numero corresponde ao mes de junho\n");
+        break;
+        case 7 :
+            printf ("este numero corresponde ao mes de julho\n");
+        break;
+        case 8 :
+            printf ("este numero corresponde ao mes de agosto\n");
+        break;
+        case 9 :
+            printf ("este numero corresponde ao mes de setembro\n");
+        break;
+        case 10 :
+            printf ("este numero corresponde ao mes de outubro\n");
+        break;
+        case 11 :
+            printf ("este numero corresponde ao mes de novembro\n");
+        break;
+        case 12 :
+            printf ("este numero corresponde ao mes de dezembro\n");
+        break;
+        default :
+            printf ("o valor eh invalido");
+    
+    }
+    return 0;
+}

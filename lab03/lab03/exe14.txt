@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+
+    float not1, not2, not3, media;
+    printf ("digite a nota do trabalho ");
+    scanf ("%f", &not1);
+    printf ("digite a nota da avaliacao semestral ");
+    scanf ("%f", &not2);
+    printf ("digite a nota do exame ");
+    scanf ("%f", &not3);
+    media = (not1 * 2 + not2 * 3 + not3 * 5) / 10;
+    printf ("a media entre as notas foi %.2f\n", media);
+    if (media < 3){
+        printf ("voce reprovou");
+    }
+     if (media >= 3 && media < 5){
+        printf ("voce esta de recuperacao");
+    }
+     if (media >= 5 && media < 10){
+        printf ("voce passou");
+    }
+
+    return 0;
+}

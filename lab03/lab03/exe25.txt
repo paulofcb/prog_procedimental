@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float vara, varb, varc, raiz1, raiz2, delta;
+    printf ("qual avariavel A ");
+    scanf ("%f", &vara);
+    printf ("qual avariavel B ");
+    scanf ("%f", &varb);
+    printf ("qual avariavel C ");
+    scanf ("%f", &varc);
+    if (vara == 0){
+        printf ("nao eh funcao de segundo grau");
+    } else {
+            delta = pow(varb,2) - 4 * vara * varc;
+            raiz1 = (-varb + sqrt(delta)) / 2 * vara;
+            raiz2 = (-varb - sqrt(delta)) / 2 * vara;
+    }
+    if (delta < 0){
+        printf ("nao existe raiz");
+    }
+    if (delta == 0){
+        printf ("raiz unica = %f", raiz1);
+    }
+    if (delta > 0){
+        printf ("as raizes sao %f e %f", raiz1, raiz2);
+    }
+    
+return 0;
+}

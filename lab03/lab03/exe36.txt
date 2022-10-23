@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float venda, salario;
+    printf("quanto o funcionario vendeu ");
+    scanf("%f", &venda);
+    if(venda >= 100000){
+        salario = 700 + 0.16 * venda;
+        printf ("o salario eh %f", salario);
+    }
+    if(venda >= 80000 && venda < 100000 ){
+        salario = 650 + 0.14 * venda;
+        printf ("o salario eh %f", salario);
+    }
+    if(venda >= 60000 && venda < 80000 ){
+        salario = 600 + 0.14 * venda;
+        printf ("o salario eh %f", salario);
+    }
+    if(venda >= 40000 && venda < 60000 ){
+        salario = 550 + 0.14 * venda;
+        printf ("o salario eh %f", salario);
+    }
+    if(venda >= 20000 && venda < 40000 ){
+        salario = 500 + 0.14 * venda;
+        printf ("o salario eh %f", salario);
+    }
+    if(venda < 20000){
+        salario = 400 + 0.14 * venda;
+        printf ("o salario eh %f", salario);
+    }
+
+return 0;
+}

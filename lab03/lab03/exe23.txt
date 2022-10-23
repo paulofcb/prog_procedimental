@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int ano, d400, d4, d100;
+    printf ("qual o ano ");
+    scanf ("%d", &ano);
+    d400 = ano % 400;
+    d4 = ano % 4;
+    d100 = ano % 100;
+    if (d400 == 0 || (d4 == 0 && d100 != 0)){
+        printf ("esse ano eh bissexto");
+    } else {
+        printf ("esse ano nao eh bissexto");
+    }
+    
+return 0;
+}

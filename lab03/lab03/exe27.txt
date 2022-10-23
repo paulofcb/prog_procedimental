@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float idade;
+    printf ("qual a idade do nadador ");
+    scanf ("%f", &idade);
+    if (idade > 5 && idade <= 7){
+        printf ("infantil A");
+    }
+     if (idade > 7 && idade <= 10){
+        printf ("infantil B");
+    }
+     if (idade > 10 && idade <= 13){
+        printf ("juvenil A");
+    }
+    if (idade > 13 && idade <= 17){
+        printf ("juvenil B");
+    }
+    if (idade > 17){
+        printf ("senior");
+    }
+    
+return 0;
+}

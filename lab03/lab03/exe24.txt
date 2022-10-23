@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int estado;
+    float valor;
+    printf ("qual o valor da mercadoria ");
+    scanf ("%f", &valor);
+    printf ("digite o numero correspondente ao estado o qual se destina a mercadoria:\nmg -- 1\nsp -- 2\nrj -- 3\nms -- 4\n");
+    scanf ("%d", &estado);
+    switch (estado){
+        case 1 :
+            valor = valor * 1.07;
+            printf ("o valor final eh %f", valor);
+        break;
+        case 2 :
+            valor *= 1.12;
+            printf ("o valor final eh %f", valor);
+        break;
+        case 3 :
+            valor *= 1.15;
+            printf ("o valor final eh %f", valor);
+        break;
+        case 4 :
+            valor *= 1.08;
+            printf ("o valor final eh %f", valor);
+        break;
+    }
+    
+return 0;
+}

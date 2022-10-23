@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+
+    int num, alg1, alg2, alg3, soma;
+    printf ("digite um numero inteiro positivo de tres slgarismos ");
+    scanf ("%d", &num);
+    if (num > 0){
+        alg1 = num / 100;
+        alg2 = (num % 100) / 10;
+        alg3 = (num % 100) % 10;
+        soma = alg1 + alg2 + alg3;
+        printf ("a soma dos algarismos eh %d", soma);
+    } else {
+            printf ("esse numero eh invalido");
+    }
+
+    return 0;
+}

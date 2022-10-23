@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float cusfab, valor;
+    printf ("qual o custo de fabrica ");
+    scanf ("%f", &cusfab);
+    if (cusfab < 12000 ){
+        valor = cusfab + cusfab * 0.05 + cusfab * 0;
+        printf("o preco para o consumidor eh %f", valor);
+    }
+    if (cusfab >= 12000 && cusfab <= 25000){
+        valor = cusfab + cusfab * 0.1 + cusfab * 0.15;
+        printf("o preco para o consumidor eh %f", valor);
+    }
+    if (cusfab > 25000){
+        valor = cusfab + cusfab * 0.15 + cusfab * 0.20;
+        printf("o preco para o consumidor eh %f", valor);
+    }
+return 0;
+}

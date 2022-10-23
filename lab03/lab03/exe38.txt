@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    int dia, mes, ano, d400, d4, d100, bi;
+    printf ("digite o numero do ano ");
+    scanf ("%d", &ano);
+    printf ("digite o numero do mes ");
+    scanf ("%d", &mes);
+    printf ("digite o numero do dia ");
+    scanf ("%d", &dia);
+    
+    d400 = ano % 400;
+    d4 = ano % 4;
+    d100 = ano % 100;
+    if (d400 == 0 || (d4 == 0 && d100 != 0)){
+        bi = 1;
+    } else {
+        bi = 0;
+    }
+    
+    if (ano <= 2022){
+        if (mes >= 1 && mes <= 12){
+        switch (mes){
+            case 2 :
+                if (bi == 1){
+                    if (dia > 0 && dia <= 29){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+                }
+                if (bi == 0){
+                    if (dia > 0 && dia <= 28){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+                }
+            break;
+            case 4 :
+                if (dia > 0 && dia <= 30){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }                   
+            break;
+            case 6 :
+                if (dia > 0 && dia <= 30){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+            break;
+            case 9 :
+                if (dia > 0 && dia <= 30){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+            break;
+            case 11 :
+                if (dia > 0 && dia <= 30){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+            break;
+            default :
+                if (dia > 0 && dia <= 31){
+                        printf ("esta eh uma data valida");
+                } else {
+                        printf ("esta nao eh uma data valida");
+                }
+        }
+        }
+        
+    } else {
+            printf ("esta nao eh uma data valida");
+    }            
+
+return 0;
+}

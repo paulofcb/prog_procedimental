@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int tser, idad, apos;
+    printf ("qual o tempo de servico do funcionario ");
+    scanf ("%d", &tser);
+    printf ("quantos anos tem o funcinario ");
+    scanf ("%d", &idad);
+    apos = idad >= 65 || tser >= 30 || (idad >= 60 && tser >= 25);
+    if (apos == 1){
+        printf ("voce pode se sposentar");
+    } else {
+            printf ("voce nao pode se aposentar ainda");
+    }
+    return 0;
+}

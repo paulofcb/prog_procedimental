@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float sal, tempo;
+    printf ("qual o salario atual ");
+    scanf ("%f", &sal);
+    printf ("qual o tempo de estadia na empresa ");
+    scanf ("%f", &tempo);
+    if (sal <= 500){
+        sal = sal * 1.25;
+    }
+    if (sal > 500 && sal <= 1000){
+        sal *= 1.2;
+    }
+    if (sal > 1000 && sal <= 1500){
+        sal *= 1.15;
+    }
+    if (sal > 1500 && sal <= 2000){
+        sal *= 1.1;
+    }
+    if (sal > 2000 && sal > 2000){
+        sal *= 1;
+    }
+    if (tempo < 1){
+        sal = sal + 0;
+        printf("o novo salario eh %f", sal);
+    }
+    if (tempo >= 1 && tempo < 4 ){
+        sal += 100;
+        printf("o novo salario eh %f", sal);
+    }
+    if (tempo >= 4 && tempo < 7 ){
+        sal += 200;
+        printf("o novo salario eh %f", sal);
+    }
+    if (tempo >= 7 && tempo < 10 ){
+        sal += 300;
+        printf("o novo salario eh %f", sal);
+    }
+    if (tempo >= 10){
+        sal += 500;
+        printf("o novo salario eh %f", sal);
+    }
+
+return 0;
+}

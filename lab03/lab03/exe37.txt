@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    int chegadah, chegadam, saidah, saidam, ttcheg, ttsaida, tapagar;
+    float valor;
+    printf ("quando ocorreu a chegada ao estacionamento ");
+    scanf("%d %d", &chegadah, &chegadam);
+    printf ("quando ocorreu a saida do estacionamento ");
+    scanf("%d %d", &saidah, &saidam);
+    ttcheg = chegadah * 60 + chegadam;
+    ttsaida =saidah * 60 + saidam;
+    tapagar = ttsaida - ttcheg;
+    if (tapagar <= 120){
+        tapagar = tapagar / 60;
+        valor = 1 * ++tapagar;
+        printf("o valor a pagar eh %f", valor);
+    }
+    if (tapagar > 120 && tapagar <= 240){
+        tapagar = tapagar / 60;
+        valor = 1.40 * ++tapagar;
+        printf("o valor a pagar eh %f", valor);
+    }
+    if (tapagar > 240){
+        tapagar = tapagar / 60;
+        valor = 2 * ++tapagar;
+        printf("o valor a pagar eh %f", valor);
+    }
+
+return 0;
+}

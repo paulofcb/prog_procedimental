@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    int faltas;
+    float nota;
+    printf("qual a nota ");
+    scanf("%f", &nota);
+    printf("qual numero de faltas ");
+    scanf("%d", &faltas);
+    if((nota >= 0 && nota < 4 ) && faltas < 20){
+        printf ("conceito E");
+    }
+    if((nota >= 4 && nota < 5 ) && faltas < 20){
+        printf ("conceito D");
+    }
+    if((nota >= 5 && nota < 7.5 ) && faltas < 20){
+        printf ("conceito C");
+    }
+    if((nota >= 7.5 && nota < 9 ) && faltas < 20){
+        printf ("conceito B");
+    }
+    if((nota >= 9 && nota <= 10 ) && (faltas < 20)){
+        printf ("conceito A");
+    }
+    if((nota >= 0 && nota < 4 ) && faltas > 20 ){
+        printf ("conceito E");
+    }
+    if((nota >= 4 && nota < 5 ) && faltas > 20 ){
+        printf ("conceito E");
+    }
+    if((nota >= 5 && nota < 7.5 ) && faltas > 20 ){
+        printf ("conceito D");
+    }
+    if((nota >= 7.5 && nota < 9 ) && faltas > 20 ){
+        printf ("conceito C");
+    }
+    if((nota >= 9 && nota <= 10 ) && (faltas > 20) ){
+        printf ("conceito B");
+    }
+
+return 0;
+}

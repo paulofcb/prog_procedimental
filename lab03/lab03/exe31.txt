@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){
+    float altura, peso;
+    printf ("digite a altura ");
+    scanf ("%f", &altura);
+    printf ("digite o peso ");
+    scanf ("%f", &peso);
+    if (altura < 1.2 && peso < 60){
+        printf ("peso A");
+    }
+    if (altura < 1.2 && (peso >= 60 && peso < 90)){
+        printf ("peso D");
+    }
+    if (altura < 1.2 && peso >= 90){
+        printf ("peso G");
+    }
+    if ((altura >= 1.2 && altura < 1.70) && peso < 60){
+        printf ("peso B");
+    }
+    if ((altura >= 1.2 && altura < 1.70)  && (peso >= 60 && peso < 90)){
+        printf ("peso E");
+    }
+    if ((altura >= 1.2 && altura < 1.70)  && peso >= 90){
+        printf ("peso H");
+    }
+    if ((altura >= 1.70) && peso < 60){
+        printf ("peso C");
+    }
+    if ((altura >= 1.70) && (peso >= 60 && peso < 90)){
+        printf ("peso F");
+    }
+    if ((altura >= 1.70) && peso >= 90){
+        printf ("peso I");
+    }
+return 0;
+}

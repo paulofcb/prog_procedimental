@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int num;
+    printf ("digite um inteiro entre 1 e 7 : ");
+    scanf ("%d", &num);
+    switch (num){
+        case 1 :
+            printf ("este dia correspone a domingo\n");
+        break;
+        case 2 :
+            printf ("este dia correspone a segunda\n");
+        break;
+        case 3 :
+            printf ("este dia correspone a terca\n");
+        break;
+        case 4 :
+            printf ("este dia correspone a uarta\n");
+        break;
+        case 5 :
+            printf ("este dia correspone a quinta\n");
+        break;
+        case 6 :
+            printf ("este dia correspone a sexta\n");
+        break;
+        case 7 :
+            printf ("este dia correspone a sabado\n");
+        break;
+        default :
+            printf ("o valor eh invalido");
+    
+    }
+    return 0;
+}
