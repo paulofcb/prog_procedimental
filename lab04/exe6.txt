@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+
+int contagem, num, resu = 0;
+
+for (contagem = 0; contagem < 10; contagem++){
+    printf ("digite um numero: ");
+    scanf ("%d", &num);
+    resu += num;
+}
+printf ("o resultado eh %d", resu/10);
+
+return 0;
+}

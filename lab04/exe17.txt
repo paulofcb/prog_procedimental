@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+
+int contador;
+float hze = 110, hchico = 150;
+
+for (contador = 0; ; contador++){
+    hze += 3;
+    hchico += 2;
+    if (hze > hchico){
+        break;
+    }
+}
+printf ("a quantidade de anos eh %d", contador);
+
+return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+int contador = 0;
+float salario;
+
+salario = 2000 * 1.015;
+do{
+salario *= 1.03;
+contador++;
+} while (contador < 26);
+printf("o salario em 2022 eh: %f", salario);
+
+return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+
+int contagem = 0, mult;
+while (contagem < 5){
+    contagem++;
+    mult = contagem * 3;
+    printf ("%d\n", mult);
+}
+
+return 0;
+}

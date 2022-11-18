@@ -1,0 +1,19 @@
+int contagem = 0;
+
+while (contagem < 100){
+    contagem++;
+    printf ("\n%d", contagem);
+}
+contagem = 0;
+do{
+    contagem++;
+    printf ("\n%d", contagem);
+} while (contagem < 100);
+
+for (contagem = 0; contagem <= 100; contagem++){
+    printf ("\n%d", contagem);
+}
+
+return 0;
+}
+    

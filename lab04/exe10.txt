@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+int contador, resu = 0;
+for (contador = 1; contador <= 50; contador ++){
+    resu = resu + 2 * contador;
+}
+printf ("%d\n", resu);
+
+return 0;
+}

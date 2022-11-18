@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(){
+
+int contador, num;
+
+printf ("digite um numero diferente de 0: ");
+do {
+    scanf ("%d", &num);
+    if (num != 0){
+    printf ("o quadrado eh %f\n", pow (num, 2));
+    printf ("a raiz eh %f\n", sqrt (num));
+    printf ("o cubo eh %f\n", pow (num, 3));
+    printf ("se quiser digitar mais um valor, digite, se nao, digite 0\n");
+    }
+} while (num != 0);
+
+return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+int contador, num, resu = 0;
+printf ("digite um numero inteiro: ");
+scanf ("%d", &num);
+for (contador = 1; contador < num; contador ++){
+    if (!(num % contador)){
+        resu += contador;
+    }
+}
+printf ("a soma eh: %d", resu);
+
+return 0;
+}

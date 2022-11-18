@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(){
+
+int num, impar, contador = 0;
+
+printf ("qual o numero: ");
+scanf ("%d", &num);
+printf ("quantos impares devem der mostrados: ");
+scanf ("%d", &impar);
+if (num % 2){
+for (contador = 0; contador < impar; contador ++){
+    num += 2;
+    printf ("%d\n", num);
+}
+} else {
+        num++;
+        do {  
+            printf ("%d\n", num);
+            num += 2;
+            contador++;
+        } while (contador < impar);
+}
+return 0;
+}

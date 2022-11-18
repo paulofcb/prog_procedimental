@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main(){
+
+int opcao, num1, num2, fim = 1;
+
+do{
+    printf ("escolha uma das opcoes:\nadicao - 1 \nsubtracao - 2 \nmultiplicacao - 3 \ndivisao - 4 \nsaida - 5\n");
+    scanf ("%d", &opcao);
+    switch(opcao){
+        case 1 :
+            printf ("digite o primeiro numero: ");
+            scanf ("%d", &num1);
+            printf ("digite o segundo numero: ");
+            scanf ("%d", &num2);
+            printf ("o resultado eh: %d\n",num1 + num2);
+        break;
+        case 2 :
+            printf ("digite o primeiro numero: ");
+            scanf ("%d", &num1);
+            printf ("digite o segundo numero: ");
+            scanf ("%d", &num2);
+            printf ("o resultado eh: %d\n",num1 - num2);
+        break;
+        case 3 :
+            printf ("digite o primeiro numero: ");
+            scanf ("%d", &num1);
+            printf ("digite o segundo numero: ");
+            scanf ("%d", &num2);
+            printf ("o resultado eh: %d\n",num1 * num2);
+        break;
+        case 4 :
+            printf ("digite o primeiro numero: ");
+            scanf ("%d", &num1);
+            printf ("digite o segundo numero: ");
+            scanf ("%d", &num2);
+            printf ("o resultado eh: %d\n",num1 / num2);
+        break;
+        case 5 :
+            fim = 0;
+        break;
+    }
+} while (fim);
+
+return 0;
+}

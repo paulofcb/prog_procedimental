@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(){
+
+int contador, saque, n100, n50, n20, n10, n5, n2, n1;
+printf("qual o valor do saque: ");
+scanf("%d", &saque);
+for(contador = 0; saque >= 100; contador++){
+    saque -= 100;
+}
+n100 = contador;
+for(contador = 0; saque >= 50; contador++){
+    saque -= 50;
+}
+n50 = contador;
+for(contador = 0; saque >= 20; contador++){
+    saque -= 20;
+}
+n20 = contador;
+for(contador = 0; saque >= 10; contador++){
+    saque -= 10;
+}
+n10 = contador;
+for(contador = 0; saque >= 5; contador++){
+    saque -= 5;
+}
+n5 = contador;
+for(contador = 0; saque >= 2; contador++){
+    saque -= 2;
+}
+n2 = contador;
+for(contador = 0; saque >= 1; contador++){
+    saque -= 1;
+}
+n1 = contador;
+printf("serao necessarias %d notas de 100, %d notas de 50, %d notes de 20, %d notas de 10, %d notas de 5, %d notas de 2 e %d notas de 1", n100, n50, n20, n10, n5, n2, n1);
+
+return 0;
+}

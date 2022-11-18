@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+
+int contagem = 0;
+
+for (contagem = 0; contagem <= 100000; contagem +=1000){
+    printf ("%d\n", contagem);
+}
+
+return 0;
+}
