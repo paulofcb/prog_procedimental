@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int fatorial(int n1);
+
+int main(){
+
+int num;
+printf ("digite o numero cujo fatorial eh desejado: ");
+scanf ("%d", &num);
+printf ("o fatorial eh: %d", fatorial(num));
+
+return 0;
+}
+
+int fatorial(int n1){
+if (n1 <= 1){
+    return 1;
+}else{
+    return (n1 * (fatorial(n1-1)));
+}
+}

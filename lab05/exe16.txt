@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int desenha_linha(int n1);
+
+int main(){
+
+int nsinais;
+printf ("quantos sinais aparecerao na tela: ");
+scanf ("%d", &nsinais);
+desenha_linha(nsinais);
+
+return 0;
+}
+
+int desenha_linha(int n1){
+    int i;
+    for (i = 1; i <= n1; i ++){
+        printf("=");
+    }
+}

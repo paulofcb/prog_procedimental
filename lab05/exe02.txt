@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int extenso (int emes){
+    switch (emes){
+        case 1 :
+        return printf ("janeiro"); 
+        break;
+        case 2 :
+        return printf ("fevereiro");  
+        break;
+        case 3 :
+        return printf ("março");   ;
+        break;
+        case 4 :
+        return printf ("abril");   ;
+        break;
+        case 5 :
+        return printf ("maio");   ;
+        break;
+        case 6 :
+        return printf ("junho");   ;
+        break;
+        case 7 :
+        return printf ("julho");   ;
+        break;
+        case 8 :
+        return printf ("agosto");   ;
+        break;
+        case 9 :
+        return printf ("setembro");   ;
+        break;
+        case 10 :
+        return printf ("outubro");   ;
+        break;
+        case 11 :
+        return printf ("novembro");   ;
+        break;
+        case 12 :
+        return printf ("dezembro");   ;
+        break;
+    }
+}
+
+int main (){
+
+int dia, mes, ano;
+printf ("qual o dia do mes:");
+scanf ("%d", &dia);
+printf ("qual o mes: ");
+scanf ("%d", &mes);
+printf ("qual o ano: ");
+scanf ("%d", &ano);
+printf ("%d de ", dia);
+extenso (mes);
+printf (" de %d", ano);
+
+return 0;
+}

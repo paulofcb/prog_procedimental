@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+float volume (r){
+    return (( 3.14 * pow (r, 3)) * 4 / 3);
+}
+
+int main(){
+
+int raio;
+printf ("qual o raio da esfera: ");
+scanf ("%d", &raio);
+printf("o volume do circulo eh %f", volume (raio));
+
+return 0;
+}

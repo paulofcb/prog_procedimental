@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int media (int n1, int n2, int n3, char l);
+
+int main(){
+
+int nota1, nota2, nota3;
+char letra;
+printf("digite a letra: ");
+scanf("%c", &letra);
+printf("digite a primeira nota: ");
+scanf("%d", &nota1);
+printf("digite a segunda nota: ");
+scanf("%d", &nota2);
+printf("digite a terceira nota: ");
+scanf("%d", &nota3);
+printf("a media eh: %d", media (nota1, nota2, nota3, letra));
+
+return 0;
+}
+
+int media (int n1, int n2, int n3, char l){
+if(l == 'a'){
+    return ((n1 + n2 + n3) / 3);
+}else{
+    return ((n1 * 5 + n2 * 3 + n3 * 2) / 10);
+}
+}

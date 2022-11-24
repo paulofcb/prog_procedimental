@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int conversao (int n1, int n2, int n3);
+
+int main(){
+
+int hora, minu, segu;
+printf ("digite a hora: ");
+scanf("%d", &hora);
+printf ("digite os minutos: ");
+scanf("%d", &minu);
+printf ("digite os segundos: ");
+scanf("%d", &segu);
+printf ("o tempo em segundos eh: %d", conversao (hora, minu, segu));
+
+return 0;
+}
+
+int conversao (int n1, int n2, int n3){
+return (n1 * 3600 + n2 * 60 + n3);
+}

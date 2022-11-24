@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int dobro (int num){
+    return (2 * num);
+}
+
+int main (){
+
+int n1, resu;
+
+printf ("digite o numero o qual se deseja obter o dobro: ");
+scanf ("%d", &n1);
+resu = dobro (n1);
+printf ("o dobro de %d eh %d", n1, resu);
+return 0;
+}

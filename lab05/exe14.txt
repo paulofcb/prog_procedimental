@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+float consumo (int n1, int n2);
+
+int main(){
+
+int dist, comb;
+printf ("digite a distancia: ");
+scanf ("%d", &dist);
+printf ("digite a quantidade de combustivel consumido: ");
+scanf ("%d", &comb);
+if (consumo(dist, comb) < 8){
+    printf("vende o carro");
+}
+if (consumo(dist, comb) >= 8 && consumo(dist, comb) <= 14){
+    printf("economico");
+}
+if (consumo(dist, comb) > 14){
+    printf("super economico");
+}
+
+return 0;
+}
+
+float consumo (int n1, int n2){
+    return (n1 / n2);
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+float operacao (int n1, int n2, char s);
+
+int main(){
+
+int num1, num2, simb;
+printf ("digite o simbolo: ");
+scanf ("%c", &simb);
+printf ("digite o primeiro numero: ");
+scanf ("%d", &num1);
+printf ("digite o segundo numero: ");
+scanf ("%d", &num2);
+printf ("o resultado eh: %f", operacao(num1, num2, simb));
+
+return 0;
+}
+
+float operacao (int n1, int n2, char s){
+if (s == '+')
+    return (n1 + n2);
+if (s == '-')
+    return (n1 - n2);
+if (s == '/')
+    return (n1 / n2);
+if (s == '*')
+    return (n1 * n2);
+
+}

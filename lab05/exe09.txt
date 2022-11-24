@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+float volume (int n1, int n2);
+
+int main(){
+
+int raio, altu;
+printf ("qual o raio da base: ");
+scanf ("%d", &raio);
+printf ("qual a altura do cilindro: ");
+scanf ("%d", &altu);
+printf ("o volume do cilindro: %f", volume(raio, altu)); 
+
+return 0;
+}
+
+float volume (int n1, int n2){
+    return (3.141592 * n2 * pow (n1, 2));
+}

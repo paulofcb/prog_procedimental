@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int piramide(int n1);
+
+
+int main(){
+int altura;
+printf ("digite a altura do triangulo: ");
+scanf ("%d", &altura);
+piramide (altura);
+
+return 0;
+}
+
+int piramide(int n1){
+int j, i, k;
+   for(i = 0; i < n1; i++){
+        for (k = n1 -1; k > i; k--){   // espaços ate a pontuaçao iniciar
+            printf(" ");
+        }
+        for(j = 0; j <= i; j ++){   // mostra a parte esquerda da piramide
+            printf("*");
+        }
+        for(j = 1; j <= i; j ++){   // mostra a parte direita da piramide
+            printf("*");
+        }
+        printf ("\n");
+    }
+}

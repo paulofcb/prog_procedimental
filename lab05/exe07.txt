@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int conversao (int n1);
+
+int main(){
+
+int cel;
+printf ("digite a temperatura em celsius: ");
+scanf ("%d", &cel);
+printf ("a conversao para fahrenheit eh: %d", conversao (cel));
+
+return 0;
+}
+
+int conversao (int n1){
+    return (n1 * 9 / 5 + 32);
+}

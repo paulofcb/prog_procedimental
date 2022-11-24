@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int ehtriangulo(int n1,int n2,int n3);
+int tipotriangulo(int n1,int n2,int n3);
+
+int main(){
+
+int lado1, lado2, lado3;
+printf("digite o primeiro lado: ");
+scanf("%d", &lado1);
+printf("digite o segundo lado: ");
+scanf("%d", &lado2);
+printf("digite o terceiro lado: ");
+scanf("%d", &lado3);
+if (ehtriangulo (lado1, lado2, lado3)){
+    printf ("esse lados formam um triangulo\n");
+    switch (tipotriangulo(lado1, lado2, lado3)){
+        case 1 :
+        printf("o triangulo eh equilatero");
+        break;
+        case 2 :
+        printf("o triangulo eh isoceles");
+        break;
+        case 3 :
+        printf("o triangulo eh escaleno");
+        break;
+    }
+}else{
+    printf ("esses lados nao formam um triangulo");
+}
+return 0;
+}
+
+int ehtriangulo(int n1,int n2,int n3){
+if (n1 < n2 + n3 && n2 < n1 + n3 && n3 < n2 + n1 ){
+    return 1;
+}else{
+    return 0;
+}
+}
+int tipotriangulo(int n1,int n2,int n3){
+if (n1 != n2 && n2 != n3 && n1 != n3){
+    return 3;
+}else{
+    if (n1 == n2 && n2 == n3 && n1 == n3){
+        return 1;
+    }else{
+        return 2;
+
+    }
+}
+}

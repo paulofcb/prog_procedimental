@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int quadrado(int n1){
+    if(sqrt(n1) - (int)sqrt(n1)){
+        return 0;
+    }else{
+        return 1;
+    }
+}
+
+int main (){
+
+int num;
+printf ("digite um numero: ");
+scanf ("%d", &num);
+if (quadrado(num)){
+    printf ("esse numero eh um qudrado perfeito");
+}else{
+    printf ("esse numero nao eh um qudrado perfeito");
+}
+
+return 0;
+}

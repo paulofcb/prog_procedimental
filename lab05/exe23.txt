@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int triangulo(int n1);
+
+
+int main(){
+int linhas;
+printf ("digite o numero de linhas: ");
+scanf ("%d", &linhas);
+triangulo (linhas);
+
+return 0;
+}
+
+int triangulo (int n1){
+int j, i;
+   for(i = 0; i < n1; i++){
+        for(j = 0; j <= i; j ++){
+            printf("*");
+        }
+        printf ("\n");
+    }
+    for(i -=2; i >= 0; i--){
+        for(j = 0; j <= i; j ++){
+            printf("*");
+        }
+        printf ("\n");
+    }
+
+}

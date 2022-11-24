@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int exclamacao(int n1);
+
+
+int main(){
+int linhas;
+printf ("digite o numero de linhas: ");
+scanf ("%d", &linhas);
+exclamacao (linhas);
+
+return 0;
+}
+
+int exclamacao(int n1){
+int j, i;
+   for(i = 0; i < n1; i++){
+        for(j = 0; j <= i; j ++){
+            printf("!");
+        }
+        printf ("\n");
+    }
+}
