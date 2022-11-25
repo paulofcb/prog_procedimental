@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+
+int soma =0, i, num1, num2;
+int vetor[8];
+
+printf ("digite o valor de cada posicao do vetor: \n");
+for (i=0; i < 8; i++){
+    scanf ("%d", &vetor[i]);
+}
+printf ("digite as posicoes do vetor que devem ser somadas:\n");
+scanf ("%d %d", &num1, &num2);
+soma = vetor[num1] + vetor[num2];
+printf ("a soma eh: %d", soma);
+
+return 0;
+}

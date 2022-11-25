@@ -1,0 +1,14 @@
+#include stdio.h
+
+int main(){
+
+int soma =0, i;
+int vetor[6] = {1, 0, 5, -2, -5, 7};
+soma = vetor[0] + vetor[1] + vetor[5];
+printf (a soma eh %dn, soma);
+vetor[4] = 100;
+for (i=0; i  6; i++){
+    printf (o valor do vetor na posicao %d eh %dn, i, vetor[i]);
+}
+return 0;
+}

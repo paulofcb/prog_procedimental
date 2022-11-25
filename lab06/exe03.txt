@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+int i;
+int vetor[6];
+
+printf ("digite o valor de cada posicao do vetor: \n");
+for (i=0; i < 6; i++){
+    scanf ("%d", &vetor[i]);
+}
+for (i--; i >= 0; i--){
+    printf ("%d", vetor[i]);
+}
+return 0;
+}

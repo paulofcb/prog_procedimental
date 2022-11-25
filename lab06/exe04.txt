@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+
+int i, maiorv, menorv;
+int vetor[5];
+
+printf ("digite o valor de cada posicao do vetor: \n");
+for (i = 0; i < 5; i++){
+    scanf ("%d", &vetor[i]);
+    if (i = 0){
+        maiorv = i;
+        menorv = i;
+    }else{
+        if(vetor[i] > vetor[i - 1]){
+            maiorv = i;
+        }
+        if(vetor[i] < vetor[i - 1]){
+            menorv = i;
+        }
+    }
+}
+printf("a posiao do maior valor do vetor e: %d", maiorv);
+printf("a posiao do menor valor do vetor e: %d", menorv);
+
+return 0;
+}
