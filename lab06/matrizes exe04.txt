@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(){
+
+int vetor[5][5];
+int i, j;
+int busca, coori = 10, coorj = 10;
+
+printf ("digite os valores para a matriz: \n");
+for (i = 0; i < 5; i++){
+    for(j = 0; j < 5; j++){
+        scanf ("%d", &vetor[i][j]);
+    }
+}
+printf ("digite o valor que deve ser buscado na matriz: ");
+scanf ("%d", &busca);
+for (i = 0; i < 5; i++){
+    for(j = 0; j < 5; j++){
+        if (vetor[i][j] == busca){
+            coori = i;
+            coorj = j;
+        }else{
+            if(i == 4 && j == 4 && coori == 10){
+                printf ("nao encontrado");
+            }
+        }
+    }
+}
+
+for (i = 0; i < 5; i++){
+    printf ("\n");
+    for(j = 0; j < 5; j++){
+        printf ("%d  ", vetor[i][j]);
+    }
+}
+if (coori != 10){
+    printf ("\no valor %d esta situado na lonha %d da coluna %d", busca, coori, coorj);
+}
+
+return 0;
+}

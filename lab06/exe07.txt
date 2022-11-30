@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(){
+
+int i, soma = 0, qtd_impares = 0;
+int vetor[6];
+
+printf ("digite seis valores para cada posicao do vetor: \n");
+for (i = 0; i < 6; i++){
+    scanf ("%d", &vetor[i]);
+}
+printf ("numeros pares: ");
+for (i = 0; i < 6; i++){
+    if (vetor[i] % 2 == 0){
+        printf ("%d ", vetor[i]);
+        if (i == 0){
+            soma = vetor[i];
+        }else{
+            soma += vetor[i];
+        }
+    }
+}
+printf ("\nnumeros impares: ");
+for (i = 0; i < 6; i++){
+    if (!(vetor[i] % 2 == 0)){
+        printf ("%d ", vetor[i]);
+        qtd_impares++;
+    }
+}
+printf ("\na soma dos pares eh: %d", soma);
+printf ("\na qunatidade de impares eh: %d", qtd_impares);
+
+return 0;
+}

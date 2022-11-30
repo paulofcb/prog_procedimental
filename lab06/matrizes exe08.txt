@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int main(){
+
+int vetor1[2][2], vetor2[2][2], matrizr[2][2];
+int i, j;
+int menu, constante;
+
+printf ("digite os valores da mtriz 1: \n");
+for (i = 0; i < 2; i++){
+    for (j = 0; j < 2; j++){
+        scanf ("%d", &vetor1[i][j]);
+    }
+}
+printf ("digite os valores da mtriz 2: \n");
+for (i = 0; i < 2; i++){
+    for (j = 0; j < 2; j++){
+        scanf ("%d", &vetor2[i][j]);
+    }
+}
+
+printf ("\nsoma - 1\n");
+printf ("subtracao - 2\n");
+printf ("adcionar constante - 3\n");
+printf ("imprimir - 4\n");
+scanf ("%d", &menu);
+switch (menu){
+    case 1 :
+        for (i = 0; i < 2; i++){
+            for (j = 0; j < 2; j++){
+                matrizr[i][j] = vetor1[i][j] + vetor2[i][j];        
+            }
+        }
+        printf ("a matriz resultante gerada eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", matrizr[i][j]);
+            }
+        }
+    break;
+    case 2 :
+        for (i = 0; i < 2; i++){
+            for (j = 0; j < 2; j++){
+                matrizr[i][j] = vetor1[i][j] - vetor2[i][j];        
+            }
+        }
+        printf ("a matriz resultante gerada eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", matrizr[i][j]);
+            }
+        }
+    break;
+    case 3 :
+        printf ("digite a constante: ");
+        scanf ("%d", &constante);
+        for (i = 0; i < 2; i++){
+            for (j = 0; j < 2; j++){
+                vetor1[i][j] = vetor1[i][j] + constante;        
+            }
+        }
+        for (i = 0; i < 2; i++){
+            for (j = 0; j < 2; j++){
+                vetor2[i][j] = vetor2[i][j] + constante;        
+            }
+        }
+        printf ("a matriz resultante da constante com a matriz 1 eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", vetor1[i][j]);
+            }
+        }
+        printf ("a matriz resultante da constante com a matriz 2 eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", vetor2[i][j]);
+            }
+        }
+    break;
+    case 4:
+        printf ("a primeira matriz gerada eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", vetor1[i][j]);
+            }
+        }
+        printf ("\na segunda matriz gerada eh: \n");
+        for (i = 0; i < 2; i++){
+            printf ("\n");
+            for (j = 0; j < 2; j++){
+                printf ("%d  ", vetor2[i][j]);
+            }
+        }
+    break;
+}
+
+
+return 0;
+}
