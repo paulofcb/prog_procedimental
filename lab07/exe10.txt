@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+
+char string1[30];
+int valor;
+int i, k;
+
+printf ("digite o nome da mercadoria: ");
+fgets (string1, 30, stdin);
+printf ("digite o valor do produto: ");
+scanf ("%d", &valor);
+k = strlen (string1);
+string1[k - 1] = ' ';
+printf("o nome da mercadoria eh: %s\n", string1); 
+printf("o valor total eh: %d\n", valor);
+printf("o valor do desconto eh: %f\n", valor * 0.1);
+printf("o valor a ser pago a vista eh: %f", valor * 0.9);
+
+return 0;
+}

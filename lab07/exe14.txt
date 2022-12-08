@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+char string1[20], string2[20];
+int i, j = 0, k;
+int conc;
+
+printf ("digite a primeira palavra: ");
+fgets (string1, 20, stdin);
+printf ("digite a segunda palavra: ");
+fgets (string2, 20, stdin);
+printf ("digite quantas letras da segunda serao concatenadas na primeira: ");
+scanf ("%d", &conc);
+k = strlen (string1);
+for (i = k - 1 ; i < k - 1 + conc; i++){
+    string1[i] = string2[j];
+    j++;
+}
+printf ("%s", string1);
+
+return 0;
+}

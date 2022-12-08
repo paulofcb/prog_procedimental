@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+char string1[20], string2[20];
+int i, j = 0, k;
+
+printf ("digite uma palavra: ");
+scanf ("%s", &string1);
+k = strlen (string1);
+for (i = k - 1; i >= 0; i--){
+    string2[j] = string1[i];
+    j++;
+}
+printf ("%s", string2);
+
+return 0;
+}

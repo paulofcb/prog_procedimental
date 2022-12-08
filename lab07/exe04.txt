@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+char string1[20], subs;
+int i, k;
+int vogal = 0;
+
+printf ("digite uma palavra: ");
+fgets (string1, 20, stdin);
+printf ("digite um caractere para substituir: ");
+scanf ("%c", &subs);
+k = strlen (string1);
+for (i = 0; i < k; i++){
+    if (string1[i] == 'a' || string1[i] == 'e' || string1[i] == 'i' || string1[i] == 'o' || string1[i] == 'u'){
+        vogal++;
+        string1[i] = subs;
+    }
+}
+printf ("a antiga palavra tinha %d vogais, a nova palavra eh: %s", vogal, string1);
+
+return 0;
+}
