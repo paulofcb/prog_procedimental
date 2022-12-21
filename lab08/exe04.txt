@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+
+struct aluno{
+    char nome[50];
+    int matricula; //assumindo que a matricula eh formada apenas por numeros
+    int nota1, nota2, nota3;
+};
+
+int main(){
+
+struct aluno x[5];
+int i;
+struct aluno maiornotap1, maiormedia, menormedia; 
+
+for (i = 0; i < 5; i++){
+    printf ("digite o nome do aluno: ");
+    fgets (x[i].nome, 50, stdin);
+    printf ("digite a matricula do aluno: "); 
+    scanf ("%d", &x[i].matricula);
+    printf ("digite a primeira nota do aluno: ");
+    scanf ("%d", &x[i].nota1);
+    printf ("digite a segunda nota do aluno: ");
+    scanf ("%d", &x[i].nota2);
+    printf ("digite a terceira nota do aluno: ");
+    scanf ("%d", &x[i].nota3);
+}
+for (i = 0, maiornotap1.nota1 = 0, maiormedia.nota1 = 0, menormedia = 0; i < 5; i++){
+    if (x[i].nota1 > maiornotap1.nota1){
+        maiornotap1 = x[i];
+    }
+    if((x[i].nota1 + x[i].nota2 + x[i].nota3)/3 > maiormedia.nota1){
+        maiormedia = x[i];
+    }
+    if(i = 0){
+        menormedia = x[i];
+    }else{
+        if((x[i].nota1 + x[i].nota2 + x[i].nota3)/3 < menormedia){
+            menormedia = x[i];
+        }   
+    }
+}
+
+printf ("a maior nota da p1 foi de %s, com %d pontos", maiornotap1.nome, maiornotap1.nota1);
+printf ("o aluno com maior media geral eh %s", maiormedia.nome);
+printf ("o aluno com menor media geral eh %s", menormedia.nome);
+
+return 0;
+}

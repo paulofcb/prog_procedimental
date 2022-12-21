@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+struct aluno{
+    char nome[50];
+    int matricula; //assumindo que a matricula eh formada apenas por numeros
+    char curso[50];
+};
+
+int main(){
+
+struct aluno x[5];
+int i;
+
+for (i = 0; i < 5; i++){
+    printf ("digite o nome do aluno: ");
+    fgets (x[i].nome, 50, stdin);
+    fflush(stdin);
+    printf ("digite a matricula do aluno: "); 
+    scanf ("%d", &x[i].matricula);
+    fflush(stdin);
+    printf ("digite o curso do aluno: ");
+    fgets (x[i].curso, 50, stdin);
+}
+for (i = 0; i < 5; i++){
+    printf ("nome: %s", x[i].nome);
+    printf ("matricula: %d  ", x[i].matricula);
+    printf ("curso: %s", x[i].curso);
+} 
+
+return 0;
+}
