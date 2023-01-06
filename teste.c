@@ -180,6 +180,10 @@ void jogar (void){
                     }
                 }
             }
+            
+            for (j = 0; j < 3; j++){
+                printf ("cartas da maquina: %s\n", mao2[j].nome);            
+            }
 
             printf ("tentos: jogador-%d  maquina-%d \n", tento1, tento2);
     
