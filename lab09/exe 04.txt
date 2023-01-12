@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void troca(int *n1, int *n2);
+
+int main(){
+
+    int x, y, *m = &x, *n = &y;
+
+    printf ("digite o valor da variavel x: \n");
+    scanf ("%d", &x); 
+    printf ("digite o valor da variavel y: \n");
+    scanf ("%d", &y);    
+    
+    printf ("valor inicial de x: %d\n", x);
+    printf ("valor inicial de y: %d\n", y);
+    
+    troca (&x, &y);
+
+    printf ("valor final de x: %d\n", x);
+    printf ("valor final de y: %d\n", y);
+
+    return 0;
+}
+
+void troca(int *n1, int *n2){
+    int t;
+    t = *n1;
+    *n1 = *n2;
+    *n2 = t;
+}

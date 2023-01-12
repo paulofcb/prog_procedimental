@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int soma_do_dobro (int *n1, int *n2);
+
+int main(){
+
+    int x, y;
+
+    printf ("digite o valor da variavel x: \n");
+    scanf ("%d", &x); 
+    printf ("digite o valor da variavel y: \n");
+    scanf ("%d", &y);    
+
+    printf ("a soma do dobro eh: %d\n", soma_do_dobro (&x, &y));
+
+    return 0;
+}
+
+int soma_do_dobro (int *n1, int *n2){
+    
+    *n1 = (*n1) + (*n1);
+    *n2 = (*n2) + (*n2);
+
+    return *n1 + *n2;
+}

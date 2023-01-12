@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+
+int main (){
+
+    int a;
+    int *b = &a, **c = &b, ***d = &c;
+
+    printf ("digite um valor inteiro: \n");
+    scanf("%d", &a);
+    printf ("o dobro: %d\n", (*b) * 2);
+    printf ("o triplo: %d\n", (**c) * 3);
+    printf ("o quadruplo: %d\n", (***d) * 4);
+
+
+    return 0;
+}

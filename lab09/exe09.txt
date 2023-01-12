@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+
+    float x[3][3];
+    int i, j;
+
+    for (i = 0; i < 3; i++){
+        for (j = 0; j < 3; j++){
+            printf ("linha %d, coluna %d: %d\n", i, j, &x[i][j]);
+        }
+    }
+
+    return 0;
+}

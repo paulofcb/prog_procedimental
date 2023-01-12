@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int ordenacao (int *p, int *p1, int *p2);
+
+int main(){
+
+    int num1, num2, num3;
+
+    printf ("digite o primeiro numero: ");
+    scanf ("%d", &num1);
+    printf ("digite o segundo numero: ");
+    scanf ("%d", &num2);
+    printf ("digite o terceiro numero: ");
+    scanf ("%d", &num3);
+
+    ordenacao (&num1, &num2, &num3);
+    
+    printf ("retorno da funcao: %d", num1);
+
+    printf ("valores ordenados: %d, %d, %d", num1, num2, num3);
+
+
+    return 0;
+}
+
+int ordenacao (int *p, int *p1, int *p2){
+    int x = *p, y = *p1, z = *p2;
+
+    if (x <= y && x <= z ){
+        *p = x;
+        if (y <= z){
+            *p1 = y;
+            *p2 = z;
+        }else{
+            *p1 = z;
+            *p2 = y;
+        }
+    }else{
+        if (y <= x && y <= z){
+            *p = y;
+            if (x <= z){
+                *p1 = x;
+                *p2 = z;
+            }else{
+                *p1 = z;
+                *p2 = x;
+            }
+        }else{
+            if (z <= x && z <= y){
+                *p = z;            
+                if (x <= y){
+                    *p1 = x;
+                    *p2 = y;
+                }else{
+                    *p1 = y;
+                    *p2 = x;
+                }
+            }
+        }
+    }
+    if (x == y && y == z){
+        return 1;
+    }else{
+        return 0;
+    }
+}

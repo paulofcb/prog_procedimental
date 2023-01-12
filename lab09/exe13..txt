@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int encontrar_str (char *p,char *p1, char str3[20], char str4[20]);
+
+int main (){
+
+    char str1[20], str2[20];
+
+    printf ("digite a primeira string (20 carateceres): \n");
+    fgets (str1, 20, stdin);
+    printf ("digite a segunda string (20 carateceres): \n");
+    fgets (str2, 20, stdin);
+
+    if (encontrar_str (str1, str2, str1, str2) == 1){
+        printf ("a segunda string ocorre dentro da primeira\n");
+    }else{
+        printf ("a segunda string nao ocorre dentro da primeira\n");
+    }
+
+    return 0;
+}
+
+int encontrar_str (char *p, char *p1, char str3[20], char str4[20]){
+    int i, j, k, l;
+    k = strlen(str3);
+    l = strlen(str4);
+
+    for (i = 0; i < k - 1; ){
+        for (j = 0; ; ){
+            if (*(p + i) == *(p1 + j)){
+                i++;
+                j++;
+                if (j == l - 1){
+                    return 1;
+                }
+            }else{
+                i++;
+                j = 0;
+            } 
+        }
+    }
+    return 0;
+}

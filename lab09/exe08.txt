@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+
+    float x[10];
+    int i;
+
+    for (i = 0; i < 10; i++){
+        printf ("posicao %d: %d\n", i, &x[i]);
+    }
+
+    return 0;
+}

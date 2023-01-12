@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void soma (int *n1, int *n2);
+
+int main(){
+
+    int x, y;
+
+    printf ("digite o valor da variavel x: \n");
+    scanf ("%d", &x); 
+    printf ("digite o valor da variavel y: \n");
+    scanf ("%d", &y);    
+
+    printf ("valores iniciais de X e Y, respectivamente: %d, %d\n", x, y);
+
+    soma(&x, &y);
+
+    printf ("valores finais de X e Y, respectivamente: %d, %d\n", x, y);
+
+    return 0;
+}
+
+void soma (int *n1, int *n2){
+    
+    *n1 = *n1 + *n2;
+}

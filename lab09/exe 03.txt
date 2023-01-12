@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+
+    int x, y, *m = &x, *n = &y;
+
+    printf ("digite a primeira variavel: \n");
+    scanf ("%d", &x); 
+    printf ("digite a segunda variavel: \n");
+    scanf ("%d", &y);    
+
+    if (n > m){
+        printf ("%d eh o endereco de x, e eh o maior endereco, o conteudo eh %d", n, y);
+    }else{
+        printf ("%d eh o endereco de y, e eh o maior endereco, o conteudo eh %d", m, x);
+    }
+
+    return 0;
+}

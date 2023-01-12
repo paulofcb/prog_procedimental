@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void preencher_vetor (int *vetor, int l);
+
+int main (){
+
+    int vet[5], k = 5;
+    int i;
+
+    printf ("vetor antes da mudanca de conteudo: \n");
+    for (i = 0; i < 5; i++){
+        printf ("%d\n", *(vet + i));
+    }
+
+    preencher_vetor (vet, k);
+
+    printf ("vetor depois da mudanca de conteudo: \n");
+    for (i = 0; i < 5; i++){
+        printf ("%d\n", *(vet + i));
+    }
+}
+
+void preencher_vetor (int *vetor, int l){
+    int i;
+    for (i = 0; i < 5; i++){
+        *(vetor + i) = l;
+    }
+}

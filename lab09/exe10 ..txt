@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(){
+
+    int x[5], *p;
+    int i;
+
+    p = x;
+    
+    for (i = 0; i < 5; i++){
+        printf ("\ndigite o elemento %d do vetor: ", i);
+        scanf ("%d", *(p + i));
+    }
+    for (i = 0; i < 5; i++){
+        printf ("o dobro do numero na posicao %d eh: %d", i, 2 * (*(p + i)));
+    }
+
+    return 0;
+}
