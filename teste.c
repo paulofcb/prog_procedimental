@@ -88,15 +88,15 @@ void jogar (void){
 
     int valor_rodada;               //variavel que define o valor de cada rodada, alterada pelo truco
 
-    FILE *p;
+    FILE *p;                    //ponteiro para o arquivo de ranking
 
-    char *q;
+    char *q;                    //ponteiro usado no processo de achar um jogador dentro do ranking
 
-    char ranking_s[200];
+    char ranking_s[200];                //string para onde as informaçoes do ranking sao transferidas
 
-    char eof_teste[50];
+    char eof_teste[50];                 //string usada no teste de fim do arquivo
 
-    char nome_player[50];
+    char nome_player[50];               //string que armazena o nome do jogador
 
     strcpy(baralho[0].nome, "3 de paus"); baralho[0].ataque = 9;                //definindo o vetor de cartas, este sera o baralho utilizado, ele é estatico e cada carta tem um nome e um ataque
     strcpy(baralho[1].nome, "2 de paus"); baralho[1].ataque = 8;                //o nome eh usado para comparar duas cartas e o ataque para definir quem tem maior poder
@@ -139,10 +139,10 @@ void jogar (void){
     strcpy(baralho[38].nome, "5 de ouros"); baralho[38].ataque = 1;
     strcpy(baralho[39].nome, "4 de ouros"); baralho[39].ataque = 0;
 
-    fflush (stdin);
+    fflush (stdin);                                             //recebendo o nome do jogador e copiando as informaçoes do arquivo para uma string
     printf ("digite o seu nome: \n");
     fgets (nome_player, 50, stdin);
-    nome_player[strlen(nome_player) - 1] = '\0';
+    nome_player[strlen(nome_player) - 1] = '\0';                
     p = fopen ("ranking.txt", "r");
     if (p != NULL){
         for ( ; !feof(p); ){
@@ -514,11 +514,11 @@ void jogar (void){
         printf ("que pena, voce perdeu\n");
         printf ("volte ao menu para verificar o ranking ou jogue mais uma pertida\n");
     }
-    p = fopen ("ranking.txt", "w");
-    q = strstr (ranking_s, nome_player);
+    p = fopen ("ranking.txt", "w");                     //alterando o ranking
+    q = strstr (ranking_s, nome_player);                //verificando se o nome ja existe no ranking
     if (q != NULL){
         for (i = 0, k = 0; k != 1 ; i++){
-            if (q[i] == ','){
+            if (q[i] == ','){                           //caso exista, devem ser modificadas as vitorias ou derrotas relativas a ele
                 if (tento1 >= 12){
                     q[i + 1] += 1;
                 }else{
@@ -528,7 +528,7 @@ void jogar (void){
             }
         }
     }else{
-        if (tento1 >= 12){
+        if (tento1 >= 12){                              //caso nao exista, deve ser adicionado
             strcat (nome_player, ",1,0\n");
         }else{
             strcat (nome_player, ",0,1\n");
