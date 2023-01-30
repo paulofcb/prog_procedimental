@@ -14,18 +14,17 @@ struct carta{
 int comparar_cartas (int carta1, int carta2, int carta3, int carta4, int opcaox);               //recebe que opcao o jogador escolheu e retorna o vencedor da jogada ou truca o jogo
 
 void jogar (void);              //funcoes que compoem o menu inicial do truco
+
 void ranking (void);
+
 void sobre (void);
+
 void sair (void);
 
 
 int main (){
-    
 
-    
     menu();
-
-    
 
     return 0;
 }
@@ -71,9 +70,9 @@ void jogar (void){
 
     struct carta carta_maquina;             //variavel que armazena a carta que a maquina escolhe naquela determinada rodada
 
-    int i, j, k, l, m, n, p = 0;                //variaveis usadas em loops
+    int i, j, k, l, n, o = 0;                //variaveis usadas em loops
 
-    int tento1, tento2;             //variaveis que armazenam os tentos do hjogador, tento1, e da maquina, tento2
+    int tento1, tento2;             //variaveis que armazenam os tentos do jogador, tento1, e da maquina, tento2
 
     int rodada1, rodada2, rodada3;              //variaveis que armazenam os vencedores de cada rodada para a decisao de quem ganha os pontos
 
@@ -88,6 +87,16 @@ void jogar (void){
     int quem_joga_primeiro;             //variavel que define quem deve dar a primeira carta em cada rodada
 
     int valor_rodada;               //variavel que define o valor de cada rodada, alterada pelo truco
+
+    FILE *p;
+
+    char *q;
+
+    char ranking_s[200];
+
+    char eof_teste[50];
+
+    char nome_player[50];
 
     strcpy(baralho[0].nome, "3 de paus"); baralho[0].ataque = 9;                //definindo o vetor de cartas, este sera o baralho utilizado, ele é estatico e cada carta tem um nome e um ataque
     strcpy(baralho[1].nome, "2 de paus"); baralho[1].ataque = 8;                //o nome eh usado para comparar duas cartas e o ataque para definir quem tem maior poder
@@ -130,6 +139,22 @@ void jogar (void){
     strcpy(baralho[38].nome, "5 de ouros"); baralho[38].ataque = 1;
     strcpy(baralho[39].nome, "4 de ouros"); baralho[39].ataque = 0;
 
+    fflush (stdin);
+    printf ("digite o seu nome: \n");
+    fgets (nome_player, 50, stdin);
+    nome_player[strlen(nome_player) - 1] = '\0';
+    p = fopen ("ranking.txt", "r");
+    if (p != NULL){
+        for ( ; !feof(p); ){
+            if (fgets (eof_teste, 50, p)){
+                strcat (ranking_s, eof_teste);
+            }
+        }
+    }else{
+        ranking_s[0] = '\0';
+    }
+    fclose (p);
+
     for (tento1 = 0, tento2 = 0; tento1 < 12 && tento2 < 12; ){             //for em que o jogo de truco acontece, a cada vez que um ciclo eh completo o valor dos tentos dos jogadores eh aumentado
         
             for (j = 0; j < 3; ){               //for que distribue as cartas para a maquina e o jogador, nao deixa que a mesma carta seja distribuida mais de uma vez
@@ -166,10 +191,10 @@ void jogar (void){
 
         if (p == 0){                //if para definir que vai dar a primeira carta, de forma alternanda, dependendo do valor da variavel quem_joga_primeiro
             quem_joga_primeiro = 0;
-            p++;
+            o++;
         }else{
             quem_joga_primeiro = 1;
-            p--;
+            o--;
         }
 
         for(i = 0; i < 3; i++){             //for em que as rodadas acontecem, a cada execuçao ocorre uma comparacao entrre as cartas jogadas pela maquina e pelo jogador
@@ -481,6 +506,38 @@ void jogar (void){
             }
         }
     }
+
+    if (tento1 >= 12){
+        printf ("parabens, voce ganhou !!\n");
+        printf ("volte ao menu para verificar o ranking ou jogue mais uma pertida\n");
+    }else{ 
+        printf ("que pena, voce perdeu\n");
+        printf ("volte ao menu para verificar o ranking ou jogue mais uma pertida\n");
+    }
+    p = fopen ("ranking.txt", "w");
+    q = strstr (ranking_s, nome_player);
+    if (q != NULL){
+        for (i = 0, k = 0; k != 1 ; i++){
+            if (q[i] == ','){
+                if (tento1 >= 12){
+                    q[i + 1] += 1;
+                }else{
+                    q[i + 3] += 1;
+                }
+                k = 1;
+            }
+        }
+    }else{
+        if (tento1 >= 12){
+            strcat (nome_player, ",1,0\n");
+        }else{
+            strcat (nome_player, ",0,1\n");
+        }
+        strcat (ranking_s, nome_player);
+    }
+    fprintf(p, "%s", ranking_s);
+    fclose (p);
+
     for (;!(opcao_termino == 1 || opcao_termino == 2); ){               //for que deixa o jogador escolher se ira jogar mais uma partida ou valtara para o menu depois de terminar um jogo
     printf("1- jogar novamente\n");
     printf("2- ir para o menu\n");
@@ -494,11 +551,42 @@ void jogar (void){
 }
 
 void ranking (void){
-    
+
+    FILE *p;
+
+    char ranking_s[200];
+
+    char eof_teste[50];
+
+    p = fopen ("ranking.txt", "r");
+    if (p != NULL){
+        for ( ; !feof(p); ){
+            if (fgets (eof_teste, 50, p)){
+                strcat (ranking_s, eof_teste);
+            }
+        }
+        printf ("%s", ranking_s);
+    }else{
+        printf ("nao existe um ranking no momento\n");
+    }
+    fclose (p);
+    menu();
 }
 
 void sobre (void){
-    
+    printf ("integrantes do grupo: Paulo Fernando Correa Brandao\n");  
+    printf ("grande parte do codigo foi feito apenas com estruturas de repeticao e structs\n");
+    printf ("versao atual do programa: 1.7\n");
+    printf ("1.0- apenas 6 cartas existiam, a mao sempre tinha as mesmas cartas, um teste dos sistemas mais basios do programa\n");
+    printf ("1.1- introducao de todas as cartas e do baralho aleatorio, maquina joga as cartas na ordem que recebeu\n");
+    printf ("1.2- introducao do sistema de tentos, sistema de rodadas, rodadas alternadas e interface para o jogador\n");
+    printf ("1.3- nao eh mais possivel escolher a mesma carta duas vezes, ou receber cartas repetidas na mao, alem de outras correcoes de problemas\n");
+    printf ("1.4- introducao de uma maquina inteligente, ate certo ponto\n");
+    printf ("1.5- introducao do sistema de truco\n");
+    printf ("1.6- introducao do sistema de ranking\n");
+    printf ("1.7- otimizacao\n");
+
+    menu();
 }
 
 void sair (void){
